@@ -1,0 +1,26 @@
+sudo apt-get install curl && curl http://fishros.com/tools/install/ros-foxy-raspi | bash
+
+sudo apt install ros-foxy-navigation2 ros-foxy-nav2-bringup '~ros-foxy-turtlebot3-.*'
+
+https://www.ncnynl.com/archives/201809/2593.html
+sudo apt-get install python3-colcon-common-extensions
+sudo apt install -y \
+    google-mock \
+    libceres-dev \
+    liblua5.3-dev \
+    libboost-dev \
+    libboost-iostreams-dev \
+    libprotobuf-dev \
+    protobuf-compiler \
+    libcairo2-dev \
+    libpcl-dev \
+    python3-sphinx
+curl -sSL http://get.gazebosim.org | sh
+sudo apt install ros-foxy-gazebo-*
+sudo apt install ros-foxy-cartographer
+sudo apt install ros-foxy-cartographer-ros
+sudo apt-get install python3-vcstool
+wget https://ghproxy.com/https://raw.githubusercontent.com/ROBOTIS-GIT/turtlebot3/ros2/turtlebot3.repos
+change to foxy-devel
+vcs import src < turtlebot3.repos
+colcon build --symlink-install --merge-install
